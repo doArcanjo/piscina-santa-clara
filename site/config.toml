@@ -14,3 +14,8 @@ title = "Tasty Licks"
     name = "About"
     url  = "/about"
     weight = 1
+    
+[[menu.main]]
+   name = "Drinks"
+   url  = "/drinks"
+   weight = 3
