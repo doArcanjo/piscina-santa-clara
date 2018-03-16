@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
 
-media_folder: "img/uploads" # Folder where user uploaded files should go
+media_folder: "src/img/gallery" # Folder where user uploaded files should go
 
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -33,3 +33,10 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Ingredients/Description", name: "description", widget: "text"}
       - {label: "Type of Drink", name: "type", widget: "string", default: "beer"}
       - {label: "Price", name: "price", widget: "string"} 
+   - name: gallery
+    label: "Gallery Image" # Used in the UI, ie.: "New Post"
+    folder: "site/content/gallery" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Gallery Image", name: "image", widget: "image"}    
